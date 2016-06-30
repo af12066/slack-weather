@@ -44,3 +44,10 @@ def getjsondata():
     response.update({'city':response['location']['city']})
 
     return response['forecasts'][0]
+
+def setmessage(res):
+    """
+    投稿するメッセージの整形
+    """
+
+    message = "{0}の{1}の天気は{2}".format(res['date'], res['city'], res['telop'])
